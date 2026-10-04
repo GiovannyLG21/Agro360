@@ -37,12 +37,13 @@ export const getCode = async (req, res) => {
         if (findResponse) return res.status(400).json({ message: ["Ya has respondido a esta encuesta"] })
         //Generar codigo aleatorio
         const code = generateCode(6);
+        console.log(code);
         const hashCode = await bcrypt.hash(code, 6)
 
         //Enviar correo
-        sendEmailFormCode(res, { formName: req.form.name, code: code, userEmail: email, userNames: userNames })
+        sendEmailFormCode({ formName: req.form.name, code: code, userEmail: email, userNames: userNames })
 
-        res.json({
+        return res.json({
             response: "Email enviado satisfactoriamente",
             data: {
                 id: user._id,

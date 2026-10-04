@@ -44,7 +44,7 @@ export function sendEmailResetPassword(res, data) {
 }
 
 //* Funcion enviar correo para obtener codigo
-export function sendEmailFormCode(res, data) {
+export function sendEmailFormCode(data) {
   const { formName, code, userEmail, userNames } = data
 
   const transporter = nodemailer.createTransport({
@@ -77,7 +77,7 @@ export function sendEmailFormCode(res, data) {
   }
 
   transporter.sendMail(mailOptions, (error, info) => {
-    if (error) return res.status(500).json({ message: [`Error al enviar el correo electrónico: ${error}`] });
+    if (error) throw new Error(`Error al enviar el correo electrónico: ${error}`)
   });
 }
 

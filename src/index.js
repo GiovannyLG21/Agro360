@@ -7,7 +7,7 @@ async function main() {
     await connectDB();
     app.listen(PORT, () => {
       console.log(`Server running in: http://localhost:${PORT}`);
-      console.log(`Enviroment: `); //${process.env.NODE_ENV}
+      console.log(`Enviroment: ${process.env.NODE_ENV}`);
     });
   } catch (error) {
     console.error(error);

@@ -1,6 +1,6 @@
 {
   "name": "agro360api",
-  "version": "1.2.0",
+  "version": "1.0.0",
   "description": "Agro360 Web Application API",
   "main": "index.js",
   "type": "module",
@@ -11,7 +11,7 @@
   "author": "AgroDevelopers",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "5.0.0",
+    "bcrypt": "6.0.0",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "exceljs": "^4.4.0",
@@ -20,7 +20,7 @@
     "lodash": "^4.17.21",
     "mongoose": "^7.6.3",
     "morgan": "^1.10.0",
-    "multer": "^1.4.5-lts.1",
+    "multer": "2.4.0",
     "nodemailer": "^6.9.7",
     "xlsx": "^0.18.5",
     "zod": "^3.22.4"
